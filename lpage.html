@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anjali Hiremath Portfolio & Responsive Landing Page</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header for Portfolio */
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background: #fff;
+            color: #4CAF50;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #45a049;
+            color: #fff;
+        }
+
+        /* Features Section for Portfolio */
+        .features {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature {
+            display: inline-block;
+            width: 30%;
+            padding: 20px;
+            background: #fff;
+            margin: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .feature h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Sign-Up Section for Landing Page */
+        .signup {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 50px;
+        }
+
+        .signup h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .signup p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .feature {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+
+            .features {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.8rem;
+            }
+
+            .features h2 {
+                font-size: 2rem;
+            }
+
+            .feature {
+                width: 100%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Portfolio Header -->
+    <header>
+        <div class="container">
+            <h1>Anjali Hiremath - Web Developer</h1>
+            <p>Showcasing My Web Development Skills</p>
+            <a href="#signup" class="cta-button">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Portfolio Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="feature">
+                <h3>HTML</h3>
+                <p>Building the structure of websites.</p>
+            </div>
+            <div class="feature">
+                <h3>CSS</h3>
+                <p>Designing beautiful layouts with modern styling.</p>
+            </div>
+            <div class="feature">
+                <h3>JavaScript</h3>
+                <p>Adding interactivity to enhance user experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Landing Page Signup Section -->
+    <section id="signup" class="signup">
+        <div class="container">
+            <h2>Sign Up Now</h2>
+            <p>Join us today and experience the difference.</p>
+            <a href="https://www.example.com" class="cta-button">Sign Up</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Anjali Hiremath. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
