@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anjali Hiremath | Portfolio</title>
+    <style>
+        /* Reset & basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Body Gradient */
+        body {
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        /* Header with Hero Section */
+        header {
+            height: 100vh;
+            background: url('https://via.placeholder.com/1500x1000') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            filter: brightness(70%);
+        }
+
+        header h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            animation: fadeIn 3s ease-out;
+        }
+
+        /* Animation for FadeIn */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            z-index: 100;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin: 0 20px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6347;
+        }
+
+        /* About Section */
+        .about, .skills, .contact {
+            background: white;
+            margin-top: 80px;
+            padding: 60px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about h2, .skills h2, .contact h2 {
+            font-size: 2.5rem;
+            color: #4e54c8;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        .skill-icons {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .skill {
+            text-align: center;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: scale(1.2);
+            color: #ff6347;
+        }
+
+        .skill i {
+            font-size: 4rem;
+            color: #4e54c8;
+        }
+
+        .skill p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact p {
+            font-size: 1.2rem;
+            color: #555;
+            text-align: center;
+        }
+
+        .contact a {
+            color: #4e54c8;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Scroll-to-top button */
+        .scroll-top-btn {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 15px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            z-index: 100;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #eaeaea;
+        }
+
+        .dark-mode header {
+            background: linear-gradient(to right, #303030, #484848);
+        }
+
+        .dark-mode .container {
+            background-color: #1f1f1f;
+        }
+
+        .dark-mode .skill i {
+            color: #ffd700;
+        }
+
+        .dark-mode .contact a {
+            color: #ffd700;
+        }
+
+        .dark-mode footer {
+            background-color: #333;
+        }
+
+        /* Dark Mode Button */
+        .toggle-btn {
+            background-color: #121212;
+            color: #ffd700;
+            border: none;
+            padding: 10px 20px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .toggle-btn:hover {
+            background-color: #444;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .skill-icons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .toggle-btn {
+                font-size: 14px;
+                top: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <div class="container">
+            <h1>Anjali Hiremath</h1>
+            <p>Web Developer | Programmer | Designer</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Anjali Hiremath, a passionate web developer with experience in creating modern, responsive websites. I thrive on solving complex problems with elegant and user-friendly solutions. Let's build something amazing together!
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skill-icons">
+                <div class="skill"><i class="fab fa-html5"></i><p>HTML</p></div>
+                <div class="skill"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
+                <div class="skill"><i class="fab fa-js"></i><p>JavaScript</p></div>
+                <div class="skill"><i class="fab fa-java"></i><p>Java</p></div>
+                <div class="skill"><i class="fab fa-python"></i><p>Python</p></div>
+                <div class="skill"><i class="fab fa-php"></i><p>PHP</p></div>
+                <div class="skill"><i class="fab fa-github"></i><p>GitHub</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:anjali@example.com">anjali@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/anjalihiremath" target="_blank">github.com/anjalihiremath</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Anjali Hiremath. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll-to-Top Button -->
+    <button class="scroll-top-btn">↑</button>
+
+    <!-- Dark Mode Toggle Button -->
+    <button class="toggle-btn">🌙 Dark Mode</button>
+
+    <!-- JavaScript -->
+    <script>
+        // Dark Mode Toggle
+        const toggleButton = document.querySelector('.toggle-btn');
+        toggleButton.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+            toggleButton.innerHTML = document.body.classList.contains("dark-mode") ? "🌞 Light Mode" : "🌙 Dark Mode";
+        });
+
+        // Scroll-to-Top Button
+        const scrollTopButton = document.querySelector('.scroll-top-btn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopButton.style.display = 'block';
+            } else {
+                scrollTopButton.style.display = 'none';
+            }
+        });
+
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth Scrolling
+        const links = document.querySelectorAll('nav a');
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
